@@ -3,7 +3,7 @@ import { GameBoard } from "../components/GameBoard"
 import io from "socket.io-client"
 import { useLocation } from "react-router-dom"
 
-const socket = io.connect(import.meta.env.VITE_API_URL)
+const socket = io.connect("https://socket-game-server-utty.onrender.com")
 
 export const Game = () => {
   const { search } = useLocation()
