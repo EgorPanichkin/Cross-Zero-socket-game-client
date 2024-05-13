@@ -3,7 +3,7 @@ import { GameBoard } from "../components/GameBoard"
 import io from "socket.io-client"
 import { useLocation } from "react-router-dom"
 
-const socket = io.connect("http://localhost:5000")
+const socket = io.connect(import.meta.env.VITE_API_URL)
 
 export const Game = () => {
   const { search } = useLocation()
